@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/homeFragment"
+            android:title="@string/nav_home" />
+        <item
+            android:id="@+id/semesterFragment"
+            android:title="@string/nav_semesters" />
+        <item
+            android:id="@+id/coursesFragment"
+            android:title="@string/nav_courses" />
+        <item
+            android:id="@+id/attendanceFragment"
+            android:title="@string/nav_attendance" />
+        <item
+            android:id="@+id/timetableFragment"
+            android:title="@string/nav_timetable" />
+        <item
+            android:id="@+id/assignmentsFragment"
+            android:title="@string/nav_assignments" />
+        <item
+            android:id="@+id/examsFragment"
+            android:title="@string/nav_exams" />
+        <item
+            android:id="@+id/gpaFragment"
+            android:title="@string/nav_gpa" />
+    </group>
+
+    <item
+        android:id="@+id/settingsFragment"
+        android:title="@string/nav_settings" />
+</menu>

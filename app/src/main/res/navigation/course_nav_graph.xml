@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/course_nav_graph"
+    app:startDestination="@id/courseSummaryFragment">
+
+    <fragment
+        android:id="@+id/courseSummaryFragment"
+        android:name="com.example.studbuddy.courses.details.CourseSummaryFragment"
+        android:label="Course Details"
+        tools:layout="@layout/fragment_course_summary">
+        <argument
+            android:name="courseId"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/courseAttendanceFragment"
+        android:name="com.example.studbuddy.attendance.AttendanceFragment"
+        android:label="Attendance"
+        tools:layout="@layout/fragment_attendance">
+        <argument
+            android:name="courseId"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/courseNotesFragment"
+        android:name="com.example.studbuddy.notes.NotesFragment"
+        android:label="Notes"
+        tools:layout="@layout/fragment_notes">
+        <argument
+            android:name="courseId"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/courseAssignmentsFragment"
+        android:name="com.example.studbuddy.assignments.AssignmentsFragment"
+        android:label="Assignments"
+        tools:layout="@layout/fragment_assignments">
+        <argument
+            android:name="courseId"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/courseExamsFragment"
+        android:name="com.example.studbuddy.exams.ExamsFragment"
+        android:label="Exams"
+        tools:layout="@layout/fragment_exams">
+        <argument
+            android:name="courseId"
+            app:argType="string" />
+    </fragment>
+
+</navigation>

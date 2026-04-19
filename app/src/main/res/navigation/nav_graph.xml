@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.studbuddy.home.HomeFragment"
+        android:label="@string/nav_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/semesterFragment"
+        android:name="com.example.studbuddy.semesters.SemesterFragment"
+        android:label="@string/nav_semesters"
+        tools:layout="@layout/fragment_semester" />
+
+    <fragment
+        android:id="@+id/coursesFragment"
+        android:name="com.example.studbuddy.courses.CoursesFragment"
+        android:label="@string/nav_courses"
+        tools:layout="@layout/fragment_courses">
+        <argument
+            android:name="semesterId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_coursesFragment_to_courseDetailFragment"
+            app:destination="@id/courseDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/courseDetailFragment"
+        android:name="com.example.studbuddy.courses.details.CourseDetailFragment"
+        android:label="Course Details"
+        tools:layout="@layout/fragment_course_detail">
+        <argument
+            android:name="courseId"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/attendanceFragment"
+        android:name="com.example.studbuddy.attendance.AttendanceFragment"
+        android:label="@string/nav_attendance"
+        tools:layout="@layout/fragment_attendance" />
+
+    <fragment
+        android:id="@+id/timetableFragment"
+        android:name="com.example.studbuddy.timetable.TimetableFragment"
+        android:label="@string/nav_timetable"
+        tools:layout="@layout/fragment_timetable" />
+
+    <fragment
+        android:id="@+id/assignmentsFragment"
+        android:name="com.example.studbuddy.assignments.AssignmentsFragment"
+        android:label="@string/nav_assignments"
+        tools:layout="@layout/fragment_assignments" />
+
+    <fragment
+        android:id="@+id/examsFragment"
+        android:name="com.example.studbuddy.exams.ExamsFragment"
+        android:label="@string/nav_exams"
+        tools:layout="@layout/fragment_exams" />
+
+    <fragment
+        android:id="@+id/gpaFragment"
+        android:name="com.example.studbuddy.gpa.GpaFragment"
+        android:label="@string/nav_gpa"
+        tools:layout="@layout/fragment_gpa" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.studbuddy.profile.ProfileFragment"
+        android:label="@string/nav_profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.studbuddy.settings.SettingsFragment"
+        android:label="@string/nav_settings"
+        tools:layout="@layout/fragment_settings">
+        <action
+            android:id="@+id/action_settingsFragment_to_notificationSettingsFragment"
+            app:destination="@id/notificationSettingsFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_appearanceSettingsFragment"
+            app:destination="@id/appearanceSettingsFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_cloudSyncFragment"
+            app:destination="@id/cloudSyncFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/notificationSettingsFragment"
+        android:name="com.example.studbuddy.settings.NotificationSettingsFragment"
+        android:label="Notifications"
+        tools:layout="@layout/fragment_notification_settings" />
+
+    <fragment
+        android:id="@+id/appearanceSettingsFragment"
+        android:name="com.example.studbuddy.settings.AppearanceSettingsFragment"
+        android:label="Appearance"
+        tools:layout="@layout/fragment_appearance_settings" />
+
+    <fragment
+        android:id="@+id/cloudSyncFragment"
+        android:name="com.example.studbuddy.settings.CloudSyncFragment"
+        android:label="Cloud Sync"
+        tools:layout="@layout/fragment_cloud_sync" />
+
+</navigation>
