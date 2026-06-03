@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_sort"
+        android:title="Sort"
+        android:icon="@drawable/ic_sort_24"
+        app:showAsAction="ifRoom">
+        <menu>
+            <group android:id="@+id/group_sort_by" android:checkableBehavior="single">
+                <item
+                    android:id="@+id/sort_by_creation"
+                    android:title="By Creation Time"
+                    android:checked="true" />
+                <item
+                    android:id="@+id/sort_by_date"
+                    android:title="By Date" />
+            </group>
+            <group android:id="@+id/group_order" android:checkableBehavior="single">
+                <item
+                    android:id="@+id/order_asc"
+                    android:title="Ascending" />
+                <item
+                    android:id="@+id/order_desc"
+                    android:title="Descending"
+                    android:checked="true" />
+            </group>
+        </menu>
+    </item>
+</menu>

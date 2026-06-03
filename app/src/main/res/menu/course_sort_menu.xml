@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_sort_courses"
+        android:title="Sort"
+        android:icon="@drawable/ic_sort_24"
+        app:showAsAction="ifRoom">
+        <menu>
+            <group android:id="@+id/group_course_sort_by" android:checkableBehavior="single">
+                <item
+                    android:id="@+id/sort_courses_by_name"
+                    android:title="By Name"
+                    android:checked="true" />
+                <item
+                    android:id="@+id/sort_courses_by_creation"
+                    android:title="By Creation Time" />
+                <item
+                    android:id="@+id/sort_courses_by_credits"
+                    android:title="By Credit Hours" />
+            </group>
+            <group android:id="@+id/group_course_order" android:checkableBehavior="single">
+                <item
+                    android:id="@+id/order_courses_asc"
+                    android:title="Ascending"
+                    android:checked="true" />
+                <item
+                    android:id="@+id/order_courses_desc"
+                    android:title="Descending" />
+            </group>
+        </menu>
+    </item>
+</menu>
